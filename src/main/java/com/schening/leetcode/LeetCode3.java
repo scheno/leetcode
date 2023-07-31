@@ -12,7 +12,7 @@ import java.util.Map;
  * 当输入参数为 abba 时，走到第二个 a 时，map.get(c) + 1 为 1，比当前 start 要小，所以要对 start 和 元素的出现位置进行比较
  *
  * @author schening
- * @date 2023/7/21 22:45
+ * @since 2023/7/21 22:45
  */
 public class LeetCode3 {
 
