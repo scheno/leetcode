@@ -8,20 +8,20 @@ import java.util.Map;
  *
  * @author schening
  * @since 2023-07-27 22:03
+ * @see <a href="https://leetcode.cn/problems/two-sum/">两数之和</a>
  */
 public class LeetCode1 {
-
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0 ; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             Integer index = map.get(target - nums[i]);
             if (index != null) {
-                return new int[] {i, index};
+                return new int[]{i, index};
             } else {
                 map.put(nums[i], i);
             }
         }
-        return new int[] {-1, -1};
+        return new int[]{-1, -1};
     }
 
 }
