@@ -1,6 +1,6 @@
 package com.schening.leetcode.tree.traverse.iteration;
 
-import com.schening.leetcode.tree.TreeNode;
+import com.schening.leetcode.tree.traverse.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

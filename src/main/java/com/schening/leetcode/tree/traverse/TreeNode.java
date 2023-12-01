@@ -1,10 +1,11 @@
-package com.schening.leetcode.tree;
+package com.schening.leetcode.tree.traverse;
 
 /**
  * @author xinghuan
  * @since 2023-08-31 23:16
  */
 public class TreeNode {
+
     public int val;
     public TreeNode left;
     public TreeNode right;
