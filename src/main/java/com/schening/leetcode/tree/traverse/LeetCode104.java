@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /**
  * LeetCode104. 二叉树的最大深度
- *
+ * <p>
  * 题解：树的层序遍历，树的层数就是树的深度
  */
 public class LeetCode104 {
@@ -35,6 +35,15 @@ public class LeetCode104 {
         }
 
         return depth;
+    }
+
+    public int getDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftDepth = getDepth(root.left);
+        int rightDepth = getDepth(root.right);
+        return Math.max(leftDepth, rightDepth) + 1;
     }
 
 }
