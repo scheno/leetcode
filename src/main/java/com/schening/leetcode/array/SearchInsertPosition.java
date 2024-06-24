@@ -4,7 +4,7 @@ package com.schening.leetcode.array;
  * 35. 搜索插入位置
  *
  * @author schen
- * @since 2024-06-27 23:19
+ * @since 2024-06-23 23:19
  */
 public class SearchInsertPosition {
 
