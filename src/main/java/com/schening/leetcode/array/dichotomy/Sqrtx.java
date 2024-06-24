@@ -1,4 +1,4 @@
-package com.schening.leetcode.array;
+package com.schening.leetcode.array.dichotomy;
 
 /**
  * 69. x 的平方根

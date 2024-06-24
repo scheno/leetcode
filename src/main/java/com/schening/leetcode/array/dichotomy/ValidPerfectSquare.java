@@ -1,4 +1,4 @@
-package com.schening.leetcode.array;
+package com.schening.leetcode.array.dichotomy;
 
 /**
  * 367. 有效的完全平方数

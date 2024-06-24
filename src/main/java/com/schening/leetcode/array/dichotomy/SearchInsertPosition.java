@@ -1,4 +1,4 @@
-package com.schening.leetcode.array;
+package com.schening.leetcode.array.dichotomy;
 
 /**
  * 35. 搜索插入位置
