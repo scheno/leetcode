@@ -12,43 +12,36 @@ public class BackspaceStringCompare {
         int sLast = s.length() - 1;
         int tLast = t.length() - 1;
         while (sLast >= 0 || tLast >= 0) {
-            int i = 0;
-            int j = 0;
-            if (s.charAt(sLast) == '#') {
-                i = 1;
-                while (i > 0) {
-                    if (s.charAt(sLast--) != '#') {
-                        i--;
-                    } else {
-                        i++;
-                    }
-                }
-            }
-            if (t.charAt(tLast) == '#') {
-                j = 1;
-                while (j > 0) {
-                    if (t.charAt(tLast--) != '#') {
-                        j--;
-                    } else {
-                        j++;
-                    }
-                }
-            }
+            sLast = getNextValidCharIndex(s, sLast);
+            tLast = getNextValidCharIndex(t, tLast);
+
             if (sLast == -1 && tLast == -1) {
                 return true;
+            }
+            if (sLast == -1 || tLast == -1) {
+                return false;
             }
             if (s.charAt(sLast--) != t.charAt(tLast--)) {
                 return false;
             }
         }
 
-        return sLast == tLast;
+        return true;
     }
 
-    public static void main(String[] args) {
-        BackspaceStringCompare bsc = new BackspaceStringCompare();
-        System.out.println(bsc.backspaceCompare("bxj##tw", "bxo#j##tw"));
-        System.out.println(bsc.backspaceCompare("b#c", "d"));
+    private int getNextValidCharIndex(String s, int index) {
+        int skip = 0;
+        while (index >= 0) {
+            if (s.charAt(index) == '#') {
+                skip++;
+            } else if (skip > 0) {
+                skip--;
+            } else {
+                break;
+            }
+            index--;
+        }
+        return index;
     }
 
 }
